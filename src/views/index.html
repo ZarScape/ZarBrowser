@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Zar Browser</title>
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+    <div id="browser-container">
+        <div id="header">
+            <div id="title-bar">
+                <div id="tab-bar">
+                    <!-- Tabs will be dynamically inserted here -->
+                </div>
+                <button id="new-tab-btn"><img src="../assets/icons/plus.svg" alt="New Tab"></button>
+                <div class="window-controls-right">
+                    <button id="minimize-btn"><img src="../assets/icons/minimize.svg" alt="Minimize"></button>
+                    <button id="maximize-restore-btn"><img src="../assets/icons/maximize.svg" alt="Maximize"/></button>
+                    <button id="close-btn"><img src="../assets/icons/close.svg" alt="Close"></button>
+                </div>
+            </div>
+            <div id="nav-bar">
+                <div class="window-controls-left">
+                    <button id="back-btn"><img src="../assets/icons/back.svg" alt="Back"></button>
+                    <button id="forward-btn"><img src="../assets/icons/forward.svg" alt="Forward"></button>
+                    <button id="reload-btn"><img src="../assets/icons/reload.svg" alt="Reload"></button>
+                </div>
+                <div id="url-container">
+                    <img src="../assets/icons/search.svg" alt="Search">
+                    <input type="text" id="url-input" placeholder="Search Google or type a URL" />
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <!-- BrowserView will be attached here -->
+        </div>
+    </div>
+    <script src="../js/renderer.js"></script>
+</body>
+</html>

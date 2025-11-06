@@ -1,0 +1,9 @@
+# Dependencies
+/node_modules
+
+# Logs
+*.log
+
+# Build and distribution
+/build
+/dist

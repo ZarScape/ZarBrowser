@@ -1,0 +1,205 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    background-color: #202124;
+    color: #bdc1c6;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#browser-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#header {
+    display: flex;
+    flex-direction: column;
+    background-color: #202124; /* Updated color */
+    border-bottom: 1px solid #35363a;
+}
+
+#title-bar {
+    display: flex;
+    align-items: center;
+    height: 40px; /* Set a fixed height */
+    padding: 0 5px;
+    -webkit-app-region: drag;
+}
+
+#tab-bar {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    height: 100%;
+    overflow: hidden;
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    height: 100%;
+    background-color: transparent;
+    color: #e8eaed;
+    cursor: pointer;
+    -webkit-app-region: no-drag;
+    position: relative;
+    min-width: 180px;
+    max-width: 220px;
+    border-right: 1px solid #35363a;
+}
+
+.tab.active {
+    background-color: #35363a;
+}
+
+.tab:first-child {
+    border-left: 1px solid #35363a;
+}
+
+.tab-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+}
+
+.tab-title {
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tab-close-btn {
+    background: none;
+    border: none;
+    color: #bdc1c6;
+    padding: 4px;
+    width: 20px;
+    height: 20px;
+    line-height: 12px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.tab-close-btn:hover {
+    background-color: #5f6368;
+}
+
+#new-tab-btn {
+    background: none;
+    border: none;
+    color: #bdc1c6;
+    padding: 8px 12px;
+    -webkit-app-region: no-drag;
+    border-radius: 50%;
+}
+
+#new-tab-btn:hover {
+    background-color: #45474a;
+}
+
+.window-controls-right {
+    display: flex;
+    -webkit-app-region: no-drag;
+}
+
+.window-controls-left button,
+.window-controls-right button {
+    background: none;
+    border: none;
+    color: #bdc1c6;
+    padding: 8px 15px;
+    -webkit-app-region: no-drag;
+}
+
+.window-controls-left button:hover,
+.window-controls-right button:hover {
+    background-color: #45474a;
+}
+
+.window-controls-left button:disabled {
+    color: #5f6368;
+    cursor: default;
+}
+
+.window-controls-left button:disabled:hover {
+    background: none;
+}
+
+.window-controls-left button:disabled img {
+    filter: invert(39%) sepia(11%) saturate(301%) hue-rotate(176deg) brightness(90%) contrast(88%);
+}
+
+#close-btn:hover {
+    background-color: #e81123;
+    color: white;
+}
+
+#close-btn:hover img {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+
+#nav-bar {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    -webkit-app-region: no-drag; /* Allow dragging only on the title bar */
+}
+
+#url-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background-color: #35363a;
+    border-radius: 25px;
+    padding: 0 15px;
+    margin: 0 10px;
+}
+
+#url-container img {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    filter: invert(62%) sepia(11%) saturate(304%) hue-rotate(176deg) brightness(94%) contrast(89%);
+}
+
+#url-input {
+    flex-grow: 1;
+    background: transparent;
+    border: none;
+    color: #e8eaed;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+#url-input:focus {
+    outline: none;
+}
+
+#content {
+    flex-grow: 1;
+    background-color: #202424;
+}
+
+.window-controls-left button img,
+.window-controls-right button img,
+#new-tab-btn img {
+    width: 14px;
+    height: 14px;
+    filter: invert(75%) sepia(8%) saturate(268%) hue-rotate(176deg) brightness(91%) contrast(86%);
+}
+
+#maximize-restore-btn img {
+    width: 12px;
+    height: 12px;
+}
+
+.tab-close-btn img {
+    width: 12px;
+    height: 12px;
+    filter: brightness(0) invert(1);
+}

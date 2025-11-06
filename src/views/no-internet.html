@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No internet</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        @keyframes slide-up {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .animate-slide-up {
+            animation: slide-up 0.5s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-zinc-900 text-white flex items-center justify-center min-h-screen p-4">
+    <div class="text-center w-full max-w-lg animate-slide-up">
+        <h1 class="text-3xl sm:text-4xl font-bold mb-4">No internet</h1>
+        <p class="text-zinc-400 mb-8">Try:</p>
+        <ul class="list-disc list-inside text-left text-zinc-400 mx-auto w-fit space-y-2">
+            <li>Checking the network cables, modem, and router</li>
+            <li>Reconnecting to Wi-Fi</li>
+        </ul>
+        <button id="reload-page" class="mt-10 bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full transition-transform transform hover:scale-105">
+            Reload
+        </button>
+    </div>
+    <script>
+        const { ipcRenderer } = require('electron');
+        document.getElementById('reload-page').addEventListener('click', () => {
+            ipcRenderer.send('reload');
+        });
+    </script>
+</body>
+</html>
