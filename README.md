@@ -17,6 +17,8 @@ A lightweight and fast web browser built with Electron.
 ![preview image 3](preview/3.png)
 
 
+# [⬇️ Download Zar Browser](https://github.com/ZarScape/ZarBrowser/releases/latest/download/ZarBrowserSetup.zip)
+
 ## Getting Started (To run the app source code)
 
 To get a local copy up and running, follow these simple steps.
