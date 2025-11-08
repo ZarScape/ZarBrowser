@@ -8,7 +8,7 @@
   "scripts": {
     "start": "electron .",
     "dev": "electron .",
-    "build": "electron-builder"
+    "build": "electron-builder --win --mac --linux"
   },
   "build": {
     "appId": "com.zarscape.browser",
@@ -20,6 +20,14 @@
     "win": {
       "icon": "src/assets/images/logo.ico",
       "target": "nsis"
+    },
+    "mac": {
+      "icon": "src/assets/images/logo.ico",
+      "target": "dmg"
+    },
+    "linux": {
+      "icon": "src/assets/images/logo.ico",
+      "target": "AppImage"
     },
     "nsis": {
       "oneClick": false,
